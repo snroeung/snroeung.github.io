@@ -1,11 +1,12 @@
-
+* {
+    font-family: 'Open Sans', sans-serif !important; 
+}
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 36px;
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(229,229,234,1) 100%) fixed;
     height: 100%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     position: fixed;
     align-items: center;
     justify-content: center;

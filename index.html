@@ -5,12 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- bootstrap -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- index.css -->
     <link rel="stylesheet" href="css/index.css" />
     <!-- google font - open sans -->
@@ -20,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap"
       rel="stylesheet"
     />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- jquery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -27,42 +24,61 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+    $(function(){
+      $("#homepage").load("src/homepage.html"); 
+      $("#about").load("src/about.html"); 
+      $("#experience").load("src/experience.html"); 
+      $("#contact").load("src/contact.html"); 
+    });
+    </script> 
     <title>Sarenna Roeung</title>
   </head>
-  <body>
-    <div class="navbar-placeholder"></div>
-    <script>
-      $(function () {
-        $(".navbar-placeholder").load("navigation.html");
-      });
-    </script>
 
-    <div class="homepage">
-        <p class="h1 fade-in-obj">
-          Hi, I’m <strong>Sarenna Roeung.</strong> <br />
-          <em>4th year student at Drexel University.</em> <br />
-          Chemical engineering major. <br />
-          Computer science minor. <br />
-          <strong>Expected graduation date of June 2023.</strong> <br />
-        </p>
-        <br />
-        <p class="h3 fade-in-obj">
-          <em
-            >Currently looking for 3-6 month internship/co-op <br />
-            for March-September 2022</em
-          >
-        </p>
-    </div>
+  <!-- navigation bar -->
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand px-5" href="/">Sarenna Roeung</a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
+          <div class="navbar-nav px-5 mb-2 mb-lg-2 justify-content-end">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#about">About</a>
+              <a class="nav-link" aria-current="page" href="#experience">Experience</a>
+              <a class="nav-link" href="#contact">Contact</a>
+          </div>
+        </div>  
+      </div>
+    </nav>
+
+    <!-- sections -->
+    <section 
+      class="fwh-section" 
+      id="homepage"    
+      data-aos="fade-in"
+      data-aos-duration="1000">
+    </section>
+    <section class="fwh-section" id="about"></section>
+    <section class="fwh-section" id="experience" style="display:flex; flex-direction: column;"></section>
+    <section class="fwh-section" id="contact"></section>
+
+
     <!-- Bootstrap JS Bundle -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

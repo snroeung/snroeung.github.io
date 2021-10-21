@@ -3,59 +3,105 @@
 }
 body {
     background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(229,229,234,1) 100%) fixed;
+    margin: 0;
 }
 
+a {
+    color:black;
+}
 p {
     line-height:32px;
     margin-bottom:20px;
+    font-weight: 500;
 }
 
-.fade-in-obj {
-    animation: fadeIn 5s;
-    -webkit-animation: fadeIn 3s;
-    -moz-animation: fadeIn 3s;
-    -o-animation: fadeIn 3s;
-    -ms-animation: fadeIn 3s;
-  }
-  @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-moz-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-webkit-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-o-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-ms-keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
+img {
+    border: 20px solid white;
+}
 
-.homepage {
-    height: 80%;
-    max-width: 100%;
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
     display: flex;
     flex-direction: column;
-    position: fixed;
-    justify-content: center;
-    margin-left:10%
-}
+    flex-basis: 100%;
+    margin: auto;
+    flex: 1;
+  }
 
-.navbar-light .navbar-brand {
+/* Bootstrap */
+.navbar-dark .navbar-brand {
     font-weight: bold;
+    color: black;
 }
 
-.navbar-light .navbar-nav .nav-link:hover {
-    color: #48484A;
+.navbar-dark .navbar-nav .nav-link {
+    color: black;
 }
+
+.btn-group {
+    padding:10px;
+}
+
+.btn.btn-dark {
+    margin-top: 10px;
+}
+
+/* Responsive sections */
+.fwh-section {
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 35px;
+    margin: auto;
+
+}
+
+.fwh-section p {
+    margin: 0;
+}
+
+.fwh-section h2 {
+    margin-top: 2%
+}
+
+/* Specific pages */
+
+#homepage {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 10%;
+}
+
+.about-container {
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#experience {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#contact, footer {
+    background-color: rgb(58,58,60);
+    color: rgb(242, 242, 247);
+}
+
+#contact {
+    text-align: center;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+

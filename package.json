@@ -1,0 +1,22 @@
+{
+  "name": "snroeung.github.io",
+  "version": "2.0.0",
+  "description": "Personal portfolio website for Sarenna Roeung",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snroeung/snroeung.github.io.git"
+  },
+  "author": "Sarenna Roeung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snroeung/snroeung.github.io/issues"
+  },
+  "homepage": "https://github.com/snroeung/snroeung.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}

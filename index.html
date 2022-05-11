@@ -9,7 +9,7 @@
   <body>
     <div class="flex flex-col md:flex-row h-screen w-screen">
       <!--Fixed sidebar start-->
-      <div class="flex flex-col basis-1/4 space-y-8 mx-10 my-16">
+      <div class="flex flex-col basis-1 md:basis-1/4 space-y-8 mx-10 my-16">
         <div class="flex flex-row space-x-8 space-y-8">
           <img
             class="w-16 h-16 rounded-full my-4"
@@ -60,10 +60,10 @@
       </div>
 
       <!--Scroll wrapper-->
-      <div class="flex basis-3/4 overflow-hidden">
+      <div class="flex basis-1 md:basis-3/4 md:overflow-hidden">
         <!--Scrollable content-->
         <div class="flex flex-col overflow-y-scroll">
-          <div class="flex flex-col w-1/2 h-screen space-y-8 m-24" id="home">
+          <div class="flex flex-col w-1/2 space-y-8 m-24" id="home">
             <img
               class="w-24 h-24 rounded-full drop-shadow-md"
               src="/img/Headshot_smaller.jpg"
@@ -94,7 +94,7 @@
           </div>
           <div class="flex flex-row space-x-8 m-24" id="about">
             <img
-              class="flex drop-shadow-md aspect-auto"
+              class="hidden md:visible md:drop-shadow-md md:aspect-auto"
               src="/img/Philadelphia_city_hall.jpg"
             />
             <div class="flex flex-col space-y-4">
@@ -121,7 +121,7 @@
               </p>
             </div>
           </div>
-          <div class="flex flex-col h-screen space-y-8 m-24" id="experience">
+          <div class="flex flex-col space-y-8 m-24" id="experience">
             <ol class="relative border-l border-gray-200 pr-3">
               <li class="mb-10 ml-4">
                 <div
@@ -251,7 +251,10 @@
               </li>
             </ol>
           </div>
-          <div class="grid grid-rows-2 grid-flow-col gap-8 m-24" id="projects">
+          <div
+            class="grid grid-flow-row md:grid-rows-2 md:grid-flow-col gap-8 m-24"
+            id="projects"
+          >
             <div
               class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md row-span-1 col-span-1"
             >

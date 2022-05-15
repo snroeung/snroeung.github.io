@@ -9,50 +9,92 @@
   <body>
     <div class="flex flex-col md:flex-row h-screen w-screen">
       <!--Fixed sidebar start-->
-      <div class="flex flex-col basis-1 md:basis-1/4 space-y-8 mx-10 my-16">
-        <div class="flex flex-row space-x-8 space-y-8">
-          <img
-            class="w-16 h-16 rounded-full my-4"
-            src="/img/Headshot_smaller.jpg"
-            alt=""
-            width="384"
-            height="512"
-          />
-          <p class="text-2xl">Sarenna Roeung</p>
+      <div
+        class="flex flex-col basis-1 md:basis-1/4 space-y-8 mx-10 my-12 md:my-16"
+      >
+        <div
+          class="flex flex-row justify-between mx-4 md:justify-start md:mx-16"
+        >
+          <p class="text-2xl font-bold">Sarenna Roeung</p>
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <svg
+                class="w-6 h-6 text-black hover:text-gray-500"
+                x-show="!showMenu"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="flex flex-col mx-16">
+        <div class="hidden mobile-menu">
+          <hr class="m-2" />
+          <ul>
+            <li>
+              <a
+                href="#home"
+                id="mobile-link"
+                class="relative inline-flex items-center w-full px-4 py-2 text-lg font-bold leading-loose hover:rounded-lg hover:bg-black hover:text-white pl-4"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                id="mobile-link"
+                class="relative inline-flex items-center w-full px-4 py-2 text-lg font-bold leading-loose hover:rounded-lg hover:bg-black hover:text-white pl-4"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#experience"
+                id="mobile-link"
+                class="relative inline-flex items-center w-full px-4 py-2 text-lg font-bold leading-loose hover:rounded-lg hover:bg-black hover:text-white pl-4"
+                >Experience</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex hidden m-4 md:flex-col md:block md:mx-16">
           <a
             href="#home"
-            class="text-2xl font-bold leading-loose hover:rounded-lg hover:bg-gray-100 pl-4"
+            class="relative inline-flex items-center w-full px-4 py-2 text-xl font-bold leading-loose hover:rounded-lg hover:bg-black hover:text-white pl-4"
             >Home</a
           >
           <a
             href="#about"
-            class="text-2xl font-bold leading-loose hover:rounded-lg hover:bg-gray-100 pl-4"
+            class="relative inline-flex items-center w-full px-4 py-2 text-xl font-bold leading-loose hover:rounded-lg hover:bg-black hover:text-white pl-4"
             >About</a
           >
           <a
             href="#experience"
-            class="text-2xl font-bold leading-loose hover:rounded-lg hover:bg-gray-100 pl-4"
+            class="relative inline-flex items-center w-full px-4 py-2 text-xl font-bold leading-loose hover:rounded-lg hover:bg-black hover:text-white pl-4"
             >Experience</a
           >
           <a
             href="#projects"
-            class="text-2xl font-bold leading-loose hover:rounded-lg hover:bg-gray-100 pl-4"
+            class="relative inline-flex items-center w-full px-4 py-2 text-xl font-bold leading-loose hover:rounded-lg hover:bg-black hover:text-white pl-4"
             >Projects</a
           >
           <hr class="m-8" />
           <a
             href="https://www.linkedin.com/in/sarenna-roeung/"
             target="_blank"
-            class="relative inline-flex items-center w-full border-b-4 border-indigo-500 px-4 py-2 text-xl font-medium border-b border-gray-700 rounded-t-lg hover:rounded-lg hover:bg-gray-100 pl-4"
+            class="relative inline-flex items-center w-full px-4 py-2 text-lg font-medium rounded-t-lg hover:rounded-lg hover:bg-black hover:text-white pl-4"
           >
             LinkedIn
           </a>
           <a
             href="https://www.github.com/snroeung"
             target="_blank"
-            class="relative inline-flex items-center w-full border-b-4 border-indigo-500 px-4 py-2 text-xl font-medium border-b border-gray-700 rounded-t-lg hover:rounded-lg hover:bg-gray-100 pl-4"
+            class="relative inline-flex items-center w-full px-4 py-2 text-lg font-medium rounded-t-lg hover:rounded-lg hover:bg-black hover:text-white pl-4"
           >
             GitHub
           </a>
@@ -63,7 +105,10 @@
       <div class="flex basis-1 md:basis-3/4 md:overflow-hidden">
         <!--Scrollable content-->
         <div class="flex flex-col overflow-y-scroll">
-          <div class="flex flex-col w-1/2 space-y-8 m-24" id="home">
+          <div
+            class="flex flex-col w-1/2 space-y-8 m-24 show-on-scroll"
+            id="home"
+          >
             <img
               class="w-24 h-24 rounded-full drop-shadow-md"
               src="/img/Headshot_smaller.jpg"
@@ -92,9 +137,9 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-row space-x-8 m-24" id="about">
+          <div class="flex flex-row space-x-8 m-24 show-on-scroll" id="about">
             <img
-              class="hidden md:visible md:drop-shadow-md md:aspect-auto"
+              class="hidden md:block md:drop-shadow-md md:aspect-auto"
               src="/img/Philadelphia_city_hall.jpg"
             />
             <div class="flex flex-col space-y-4">
@@ -386,7 +431,7 @@
             </div>
           </div>
           <div
-            class="p-4 rounded-lg shadow mx-24 md:flex md:items-center md:justify-between md:p-6"
+            class="p-4 mx-24 md:flex md:items-center md:justify-between md:p-6"
           >
             <span class="text-sm text-gray-500 sm:text-center"
               >© 2022
@@ -398,5 +443,20 @@
         </div>
       </div>
     </div>
+    <script>
+      const btn = document.querySelector("button.mobile-menu-button");
+      const menu = document.querySelector(".mobile-menu");
+      const mobileLinks = document.querySelectorAll("#mobile-link");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      });
+    </script>
   </body>
 </html>

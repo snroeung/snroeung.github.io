@@ -127,7 +127,7 @@
     if (empty) {
       hint.textContent = "▸ photographs coming soon";
     } else {
-      const of = total > photos.length ? ` of ${total}, shuffled each visit` : "";
+      const of = total > photos.length ? ` of ${total}` : "";
       hint.textContent = `▸ ${photos.length}${of} · drag the strip, click a photo for details →`;
     }
 

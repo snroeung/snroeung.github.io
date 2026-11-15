@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Photographs — Sarenna Roeung</title>
+    <meta name="description" content="Travel photographs by Sarenna Roeung, taken on a Fujifilm X-E4." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/site.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="site-header">
+        <a href="index.html" class="brand">Sarenna Roeung</a>
+        <button type="button" class="menu-btn" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+          <svg class="icon-open" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 6h14M3 10h14M3 14h14"></path></svg>
+          <svg class="icon-close" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16"></path></svg>
+        </button>
+        <nav id="primary-nav" class="nav" aria-label="Primary">
+          <a href="index.html#experience"><span>Experience</span><span class="nav-arrow">▸ 01</span></a>
+          <a href="index.html#projects"><span>Projects</span><span class="nav-arrow">▸ 02</span></a>
+          <a href="photographs.html" aria-current="page"><span>Photographs</span><span class="nav-arrow">▸ 03</span></a>
+          <a href="#contact"><span>Contact</span><span class="nav-arrow">▸ 04</span></a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="gallery-intro">
+          <div>
+            <a href="index.html" class="back">← Back home</a>
+            <h1>Photographs</h1>
+            <p id="gallery-lede">Taken on a Fujifilm X-E4 while travelling. Click any print to see where and when.</p>
+          </div>
+          <span class="count" id="count">▸ 0 PHOTOGRAPHS</span>
+        </section>
+
+        <div class="edge edge--boxed" aria-hidden="true"><span>SARENNA 400</span><span>▸ 12</span><span>▸ 12A</span><span>CONTACT SHEET</span><span class="wide">▸ 13</span><span class="wide">▸ 13A</span></div>
+
+        <section class="grid" id="grid" aria-label="All photographs"><!-- prints rendered by js/gallery.js --></section>
+      </main>
+
+      <footer id="contact" class="site-footer">
+        <p>Say hello — <a href="https://www.linkedin.com/in/sarenna-roeung/" target="_blank" rel="noopener">on LinkedIn</a></p>
+        <nav aria-label="Elsewhere">
+          <a href="https://www.github.com/snroeung" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/sarenna-roeung/" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+      </footer>
+    </div>
+
+    <dialog class="photo-dialog" id="photo-dialog" aria-label="Photograph details">
+      <button type="button" class="icon-btn dialog-close" data-close aria-label="Close details">
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l12 12M16 4L4 16"></path></svg>
+      </button>
+      <div class="photo-dialog__inner">
+        <img src="" alt="" />
+        <div class="photo-dialog__info">
+          <span class="photo-dialog__num" data-num></span>
+          <div>
+            <h2 data-place></h2>
+            <p class="photo-dialog__date" data-date></p>
+          </div>
+          <div class="photo-dialog__nav">
+            <button type="button" class="btn-mono btn-mono--line" data-prev>← PREV</button>
+            <button type="button" class="btn-mono btn-mono--solid" data-next>NEXT →</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <script src="js/menu.js"></script>
+    <script src="js/photos.js"></script>
+    <script src="js/gallery.js"></script>
+  </body>
+</html>
